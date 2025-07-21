@@ -1,0 +1,50 @@
+import os
+
+def clear_screen():
+    if os.name == 'nt':
+        cmd = 'cls'
+    else:
+        cmd = 'clear'
+    os.system(cmd)
+
+entrada = input ("Quantos alunos tem na sala:")
+if entrada.isdigit():
+    alunos = int(entrada)
+else:
+    print("Pessoas só tem como ser número inteiro!")
+    
+notas1 = []
+notas2 = []
+
+for i in range (1, alunos+1):
+    while True:
+        entrada = input (f"Diga a nota do {i}° aluno no primeiro bimestre:")
+        try:
+            entrada.isdigit()
+            nota1 = float(entrada)
+            notas1.append(nota1)
+            break
+        except ValueError:
+            print("As notas só podem ser números!")
+    i+=1
+
+for i in range (1, alunos+1):
+    while True:
+        entrada = input (f"Diga a nota do {i}° aluno no segundo bimestre:")
+        try:
+            entrada.isdigit()
+            nota2 = float(entrada)
+            notas2.append(nota2)
+            break
+        except ValueError:
+            print("As notas só podem ser números!")
+    i+=1
+    
+clear_screen()
+    
+medfin = [(n1 + n2) / 2 for n1, n2 in zip(notas1, notas2)] #zip agrupa pares, então notas1= [10;90;73;…] e notas2= [90;23;12;…] ele vai pegar o primeiro de ambas as listas e juntar como um só, transformando notas1[1] e notas2[1] em n1 e n2
+medtur = sum(medfin)/len(medfin)
+    
+for idx, (n1, n2, m) in enumerate(zip(notas1, notas2, medfin), start = 1): #transforma cada valor em triozinho que nem o de cima:    
+ print (f"A nota do {idx}º aluno no 1º bimestre foi {n1:.1f} e no 2ª semestre foi {n2:.1f}, então a média dele é de {m:.2f}")
+ print (f"Além disso, a média da turma foi {medtur:.2f}")
