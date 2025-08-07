@@ -1,0 +1,43 @@
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse('<h1 style="color: blue; font-family: futura; font-size:200%"><b>PF</b></h1>'
+    '<p style="color: #3a3e45;font-family:futura"> PF@email.com | (XX)XXXXX-XXXX'
+    '<br> linkedin.com/in/XXXXXXXXXXXX'
+    '<br> Rua XXXX, 1234, XXXXXX- XX</p>'
+    
+    '<h1 style="font-family: futura; font-size: 150%"> <b>Resumo</b></h1>'
+    '<p style="font-family: futura"> PF é um estudante do Y° ano de Engenharia Química na Universidade' \
+    'X, campus Y, com fluência em 4(quatro) idiomas e experiência como tradutor e professor. Proativo, fle' \
+    'xível e com forte interesse por projetos multidisciplinares e de impacto social.<p>'
+
+    '<h1 style="font-family: futura; font-size: 150%"> <b>Objetivo</b></h1>'
+    '<p style="font-family: futura">Encontrar oportunidades de estágio com foco em sustentabilidade e redução de impactos, aplicando' \
+    'conceitos teóricos pelo bem do meio-ambiente e da comunidade próxima.</p>'   
+
+    '<h1 style="font-family: futura; font-size: 150%"> <b>Educação</b></h1>'
+    '<p style="font-family: futura">2025-2030<br>Cursando Engenharia Química - XXX, campus Y<br>2025<br>Curso de Francês completo' \
+    'nível Intermediário - XXX<br>2017-2020<br>Curso de Japonês do Iniciante à Intermediário - XXX' \
+    '<br>2015-2016<br>Curso de Inglês Fluente - XXX</p>'
+
+    '<h1 style="font-family: futura; font-size: 150%"> <b>Idiomas</b></h1>'
+    '<p style="font-family: futura">Português - Nativo<br>Inglês - Fluente<br>Francês - Avançado<br>Japonês - Intermediário</p>' \
+    
+    '<h1 style="font-family: futura; font-size: 150%"> <b>Experiência</b></h1>'
+    '<p style="font-family: futura"><style=font-size:130%>XXXX, Núcleo YYY<br><style=font-size:100%>Voluntário | de 03/2016'
+    ' até 06/2017 <ul>' \
+    '<li> Suporte, como mão de obra, nos projetos realizados na cidade a fim de auxiliar a comunidade local.' \
+    '</ul><br><style=font-size:130%>XXXX, Núcleo YYYY<br><style=font-size:100%>Voluntário | de 06/2025 até' \
+    ' atualmente <ul>' \
+    '<li>Gerente de Pessoas no projeto AAAAAAA, garantindo que toda a equipe de 7 membros esteja em harmonia e' \
+    'com suas responsabilidades em dia;' \
+    '<li> Responsável pelas comunicações dos projetos BBBBBBB e CCCCCCCC à comunidade externa em forma de posts e cartazes' \
+    '</ul><br><style=font-size=130%>Colégio XXXXX<br><style=font-size:100%>Professor Monitor Voluntário | de 06/2019 até 12/2019 <ul>' \
+    '<li> Planejamento de aulas sobre todo o conteúdo do Ensino Fundamental para aplicar às respectivas turmas' \
+    '<li> Aulas no contra-turno do colégio, garantindo àqueles presente uma melhoria de, aproximadamente, 45% em suas notas finais,' \
+    'evitando a reprovação.' \
+    '</ul><br><style=font-size:130%>Freenlancer|2016 até atualmente <ul>' \
+    '<li> Tradução criativa de projetos audiovisuais e HQs como hobby' \
+    '<li> Duas traduções realizadas foram pagas, ambas Japonês ⇔ Inglês' \
+    '</ul></p>' \
+    )
